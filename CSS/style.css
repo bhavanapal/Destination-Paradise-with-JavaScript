@@ -43,8 +43,7 @@
     width: 27%;
     margin: 10px;
     padding:10px;
-/*     border: 2px solid #7875753b; */
-    border: 2px solid red;
+    border: 2px solid #7875753b;
 } 
 
 .explore-sites .card-container .card img{
