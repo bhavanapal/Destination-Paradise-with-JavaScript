@@ -183,48 +183,92 @@
 /* ======================================
    Mobile (576px - 767px)
 ====================================== */
-@media (max-width: 767px) {
 
-    #carousel {
-        margin: 15px;
+/* ================= Mobile ================= */
+
+@media screen and (max-width:768px){
+
+    #carousel{
+        margin:10px;
     }
 
-    .carousel-item img {
-        height: 35vh;
+    .carousel-item img{
+        width:100%;
+        height:220px;
+        object-fit:cover;
+        border-radius:10px;
     }
 
-    .explore-container {
-        margin-top: 50px;
-        padding: 10px;
+    .explore-container{
+        flex-direction:column;
+        margin:30px 10px;
+        align-items:center;
     }
 
-    .form .form-container {
-        width: 100%;
-        padding: 10px;
+    .explore-container .vr{
+        display:none;
     }
 
-    .explore-sites #card-container {
-        flex-direction: column;
-        align-items: center;
+    .form{
+        width:100%;
     }
 
-    .card {
-        width: 90%;
+    .form .form-container{
+        width:100%;
+        margin:0;
+        padding:10px;
     }
 
-    .about-us {
-        margin-top: 50px;
+    .explore-sites{
+        width:100%;
     }
 
-    .about-us .about-img {
-        width: 100%;
+    #card-container{
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        padding:10px;
     }
 
-    .about-us .about-text p {
-        padding: 8px;
-        font-size: 15px;
+    .card{
+        width:95%;
+        margin:10px 0;
+    }
+
+    .card img{
+        width:100%;
+        margin:0;
+    }
+
+    .about-us{
+        flex-direction:column;
+        margin:40px 10px;
+    }
+
+    .about-us .about-img{
+        width:100%;
+        margin:0;
+    }
+
+    .about-text{
+        width:100%;
+    }
+
+    .about-text p{
+        padding:10px;
+        margin:10px 0;
+        font-size:15px;
+        text-align:justify;
+    }
+
+    h4{
+        font-size:22px;
     }
 }
+
+
+ 
+
 
 /* ======================================
    Small Mobile (Below 576px)
