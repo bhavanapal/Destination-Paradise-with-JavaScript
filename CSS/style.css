@@ -1,83 +1,267 @@
-#container{
-    background-color:rgb(241, 244, 244);
-    min-height: 100vh; 
+/* ==========================
+   Main Container
+========================== */
+#container {
+    background-color: rgb(241, 244, 244);
+    min-height: 100vh;
 }
 
-#carousel{
+/* ==========================
+   Carousel
+========================== */
+#carousel {
     margin: 60px;
 }
 
-.carousel-item  img{
+.carousel-item img {
+    width: 100%;
     height: 65vh;
+    object-fit: cover;
     border-radius: 12px;
 }
 
-.explore-container{
-    display:flex;
-    justify-content: center;
-    margin: 10px;
-    margin-top: 100px;
-}
-
-.explore-container .form h4,.explore-sites h4 , .about-us h4 ,.about-text h4{
-      text-align: center;
-       margin:10px;  
-}
-.explore-container .vr{
-    height: 200x;
-    border: 2px solid #000;
-}
- .form .form-container{
-   margin-left: 90px;
-   margin-top: 20px;
-   width: 75%;
-   padding: 15px;
-}
-.explore-sites #card-container{
-    display: flex; 
-    justify-content: center;
-    padding: 15px; 
-} 
-
-.card{
-    width: 27%;
-    margin: 10px;
-    padding:10px;
-    border: 2px solid #7875753b;
-} 
-
-.explore-sites .card-container .card img{
-    width: 80%;
-    margin: 30px;
-    border-radius: 12px;
-    align-items: center;
-}
-.explore-sites .card-container .card .card-body{
-    justify-items: center;
-} 
-.explore-sites .card-container .card,.card-body, .card-title,.card-text{
-    text-align:center;
-    letter-spacing: 1px;
-}
-.about-us{
+/* ==========================
+   Explore Section
+========================== */
+.explore-container {
     display: flex;
-    justify-content: center; 
+    justify-content: center;
+    align-items: flex-start;
+    gap: 30px;
     margin: 10px;
     margin-top: 100px;
-} 
- .about-us .about-img{
-    width:85%;
-    border-radius: 16px;
-    margin: 20px;
 }
-.about-us .about-text p{
-    margin: 15px;
-     padding: 12px; 
+
+.explore-container .form h4,
+.explore-sites h4,
+.about-us h4,
+.about-text h4 {
+    text-align: center;
+    margin: 10px;
+}
+
+.explore-container .vr {
+    border: 2px solid #000;
+    height: 200px; /* Fixed typo: 200x -> 200px */
+}
+
+.form .form-container {
+    margin-left: 90px;
+    margin-top: 20px;
+    width: 75%;
+    padding: 15px;
+}
+
+/* ==========================
+   Cards
+========================== */
+.explore-sites #card-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 15px;
+}
+
+.card {
+    width: 27%;
+    padding: 10px;
+    border: 2px solid #7875753b;
+}
+
+.explore-sites .card-container .card img {
+    width: 80%;
+    display: block;
+    margin: 20px auto;
+    border-radius: 12px;
+}
+
+.explore-sites .card-container .card .card-body {
+    text-align: center;
+}
+
+.explore-sites .card-container .card,
+.card-body,
+.card-title,
+.card-text {
     text-align: center;
     letter-spacing: 1px;
 }
 
+/* ==========================
+   About Section
+========================== */
+.about-us {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    margin: 10px;
+    margin-top: 100px;
+}
 
+.about-us .about-img {
+    width: 85%;
+    border-radius: 16px;
+    margin: 20px;
+}
 
+.about-us .about-text p {
+    margin: 15px;
+    padding: 12px;
+    text-align: center;
+    letter-spacing: 1px;
+}
 
+/* ======================================
+   Laptop (992px - 1199px)
+====================================== */
+@media (max-width: 1199px) {
 
+    #carousel {
+        margin: 40px;
+    }
+
+    .card {
+        width: 40%;
+    }
+
+    .form .form-container {
+        width: 90%;
+        margin-left: 40px;
+    }
+
+    .about-us {
+        gap: 20px;
+    }
+}
+
+/* ======================================
+   Tablet (768px - 991px)
+====================================== */
+@media (max-width: 991px) {
+
+    #carousel {
+        margin: 25px;
+    }
+
+    .carousel-item img {
+        height: 50vh;
+    }
+
+    .explore-container {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 60px;
+    }
+
+    .explore-container .vr {
+        display: none;
+    }
+
+    .form .form-container {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .card {
+        width: 45%;
+    }
+
+    .about-us {
+        flex-direction: column;
+        text-align: center;
+        margin-top: 70px;
+    }
+
+    .about-us .about-img {
+        width: 100%;
+        margin: 10px 0;
+    }
+}
+
+/* ======================================
+   Mobile (576px - 767px)
+====================================== */
+@media (max-width: 767px) {
+
+    #carousel {
+        margin: 15px;
+    }
+
+    .carousel-item img {
+        height: 35vh;
+    }
+
+    .explore-container {
+        margin-top: 50px;
+        padding: 10px;
+    }
+
+    .form .form-container {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .explore-sites #card-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 90%;
+    }
+
+    .about-us {
+        margin-top: 50px;
+    }
+
+    .about-us .about-img {
+        width: 100%;
+    }
+
+    .about-us .about-text p {
+        padding: 8px;
+        font-size: 15px;
+    }
+}
+
+/* ======================================
+   Small Mobile (Below 576px)
+====================================== */
+@media (max-width: 575px) {
+
+    #carousel {
+        margin: 10px;
+    }
+
+    .carousel-item img {
+        height: 28vh;
+    }
+
+    .explore-container {
+        margin-top: 40px;
+    }
+
+    .form .form-container {
+        width: 100%;
+        padding: 8px;
+    }
+
+    .card {
+        width: 100%;
+    }
+
+    .card img {
+        width: 90%;
+    }
+
+    h4 {
+        font-size: 20px;
+    }
+
+    .about-us .about-text p {
+        font-size: 14px;
+        line-height: 1.6;
+    }
+}
